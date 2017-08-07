@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset="UTF-8">
+	<title>Landing page</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<!--font Roboto-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="{% static 'css/landing.css' %}">
+	
+
+</head>
+<body>
+	<div class="general-container">
+		
+		<div class="container top-container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<img src="/static/img/bg_image.jpg" class="img-responsive">
+					<h1 class="title">Едeте далеко за рулем?<br>
+						Закажите "Предупреждающий" браслет!<br>
+					Оставьте е-мэйл для связи</h1>
+					<div>
+						<form action="" method="post" class="form-inline text-center">{% csrf_token %}
+							<div class="form-group">
+								<label>Ваше имя: </label>
+								<input name="{{ form.name.name }}" class="form-control">
+							</div>
+							<div class="form-group">
+								<label>Ваш е-мэйл: </label>
+								<input name="{{ form.email.name }}" class="form-control">
+							</div>
+							<button type="submit" class="btn btn-primary btn-orange">Отправить</button>
+							
+						</form>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container top-discription">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<h1 class="title">Браслет "Предупреждающий"</h1>
+					<img src="/static/img/braslet.jpg" class="img-responsive">
+					<br>
+					<h5>
+						<p>
+							Браслет одевается на запястье водителя и фиксирует его пульс. <br>
+							При снижении пульса на 15% устройство выдает вибро-сигнал. <br>
+							Если пульс снижаться до 20%, звучит звуковая сигнализация. <br>
+							Если пульс снижается до 25%, браслет отправляет СМС-сообщение на номер 112 - "Водитель засыпает, коодинаты: ХХХХХ". <br>
+							Одновременно прибор дает команду бортовому компьютеру - включить аварийную сигнализацию и принудительно остановить автомобиль.
+						</p>
+					</h5>
+				</div>
+			</div>
+		</div>
+			
+	</div>
+	
+	<div class="container footer">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+			</div>
+		</div>
+	</div>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.14.min.js"></script>
+	<!-- Latest complied and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>

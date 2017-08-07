@@ -1,0 +1,86 @@
+html, body{
+  height: 100%;
+  max-height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  padding: 10px;
+}
+
+.navbar{
+  margin-bottom: 0;
+}
+
+.wrapper{
+  min-height: 100%;
+}
+
+.wrapper-content{
+  overflow: auto;
+  padding-bottom: 180px; /* must be same height as footer */
+}
+
+.footer{
+  position: relative;
+  margin-top: -180px; /* negative value of footer height */
+  height: 180px;
+  clear: both;
+  background-color: white;
+}
+
+.section-top{
+  margin-bottom: 20px;
+}
+
+.section{
+  padding: 50px 0;
+}
+
+.section h1{
+  margin-bottom: 40px;
+}
+
+
+.navbar-top{
+  min-height: 10px;
+  height: 200px;
+  background-color: white;
+  border: none;
+  border-radius: 0;
+}
+
+.navbar-main{
+  background-color: white;
+  border: none;
+  border-radius: 0;
+}
+
+
+.text-typing {
+  --duration: 3s;
+
+  width: 29ch;
+  overflow: hidden;
+
+  font: 44px, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New',, monospace !important;
+  white-space: nowrap;
+
+  animation: typing var(--duration) steps(29, end) backwards;
+}
+
+.text-typing:nth-child(2) {
+  animation-delay: var(--duration);
+}
+
+.text-typing:nth-child(3) {
+  animation-delay: calc(var(--duration) * 2);
+}
+
+.text-typing:nth-child(4) {
+  animation-delay: calc(var(--duration) * 3);
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+}
