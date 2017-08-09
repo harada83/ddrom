@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'landing',
-    
+    'jp_ed_landing',
+
 ]
 
 MIDDLEWARE = [
